@@ -99,7 +99,15 @@
     [self checkFilePathIsExists:path];
     return [path stringByAppendingPathComponent:[[name stringFromMD5] stringByAppendingString:isWav?@".wav":@".amr"]];
 }
-
+/**
+ *   @author xiaerfei
+ *
+ *   检查文件目录是否存在 不存在就创建
+ *
+ *   @param path 文件目录
+ *
+ *   @return 是否存在
+ */
 - (BOOL)checkFilePathIsExists:(NSString *)path
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
